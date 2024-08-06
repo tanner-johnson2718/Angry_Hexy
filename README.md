@@ -30,12 +30,21 @@ Hexy is a hexapod robotics kit from Arcbotics. Its a great little robot kit with
 
 ![blah](./readme_res/Block_Dia_Macro.png)
 
-# Software Setup
+# Software
 
-* [Follow instructions](https://nix.dev/tutorials/nixos/installing-nixos-on-a-raspberry-pi to get base image
-* Copy the [conf](./configuration.nix) onto the board at `/etc/nixos/configuration.nix`
-* To get GPIO library used this [PR](https://github.com/NixOS/nixpkgs/pull/316936)
-    * [pigpio.nix](./pigpio.nix)
-    * Added boiler plate composition [default.nix](./default.nix)
+* Just install raspian-lite with rpi-imager
+* GPIO library is built in and one can use the following to turn a servo from a terminal:
 
-    
+```
+python3
+gpio_bcm_num=18
+from gpiozero import AngularServo
+servo = AngularServo(gpio_bcm_num, min_pulse_width=0.0006, max_pulse_width=0.0023)
+```
+
+* To set up remote camera service [follow this](https://www.instructables.com/How-to-Make-Raspberry-Pi-Webcam-Server-and-Stream-/)
+    * control port on 6969
+    * stream port on 6970
+    * Turn off picture and movie capture
+    * Frames to like 10
+* On reboot to start up `sudo service motion start` and `sudo motion`
