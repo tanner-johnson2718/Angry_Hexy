@@ -29,3 +29,11 @@ Hexy is a hexapod robotics kit from Arcbotics. Its a great little robot kit with
     3) The mounting of the GPP and power distribution is to be specified and its ultimate mounting solution is of minor concern.
 
 ![blah](./readme_res/Block_Dia_Macro.png)
+
+# Software Model
+
+## Initial Nix Generic Image Deployment
+
+* Follow instructions [here](https://nix.dev/tutorials/nixos/installing-nixos-on-a-raspberry-pi
+
+    
