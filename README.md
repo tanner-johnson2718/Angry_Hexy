@@ -30,10 +30,12 @@ Hexy is a hexapod robotics kit from Arcbotics. Its a great little robot kit with
 
 ![blah](./readme_res/Block_Dia_Macro.png)
 
-# Software Model
+# Software Setup
 
-## Initial Nix Generic Image Deployment
-
-* Follow instructions [here](https://nix.dev/tutorials/nixos/installing-nixos-on-a-raspberry-pi
+* [Follow instructions](https://nix.dev/tutorials/nixos/installing-nixos-on-a-raspberry-pi to get base image
+* Copy the [conf](./configuration.nix) onto the board at `/etc/nixos/configuration.nix`
+* To get GPIO library used this [PR](https://github.com/NixOS/nixpkgs/pull/316936)
+    * [pigpio.nix](./pigpio.nix)
+    * Added boiler plate composition [default.nix](./default.nix)
 
     

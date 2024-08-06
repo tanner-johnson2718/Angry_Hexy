@@ -35,7 +35,13 @@ in {
     };
   };
 
-  environment.systemPackages = with pkgs; [ vim ];
+  environment.systemPackages = with pkgs; [ 
+    vim
+    wget
+    git
+    zip
+    unzip
+  ];
 
   services.openssh.enable = true;
 
